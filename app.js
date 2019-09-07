@@ -11,7 +11,7 @@ var usersRouter = require('./routes/users');
 var departmentRouter = require('./model/department/department.route');
 var hospitalRouter = require('./model/hospital/hospital.route');
 var doctorRouter = require('./model/doctor/doctor.route');
-
+var patientRouter = require('./model/patient/patient.route');
 
 var app = express();
 
@@ -33,6 +33,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/department', departmentRouter);
 app.use('/hospital', hospitalRouter);
 app.use('/doctor', doctorRouter);
+app.use('/patient', patientRouter);
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter); 
